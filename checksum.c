@@ -21,7 +21,9 @@
 int main (int argc, char * argv[], char ** envp) {
 
   int count = 10;
-  int sum = 0;   
+  int sum = 0;
+  int quotient;
+  int remainer;   
   byte checksum; 
   byte complement;
 
@@ -34,7 +36,7 @@ int main (int argc, char * argv[], char ** envp) {
       checksum = header[i];
       header[i] = 0;
     }
-    sum += header[c];
+    sum += header[i];
   }
   quotient = sum/(max_int + 1);
   remainder = sum%(max_int + 1);
