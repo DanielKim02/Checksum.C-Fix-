@@ -33,10 +33,10 @@ int main (int argc, char * argv[], char ** envp) {
 
   for (int i = 1; i<= count; i++){
     if(i == 6){
-      checksum = header[i];
-      header[i] = 0;
+      checksum = header[i-1];
+      header[i-1] = 0;
     }
-    sum += header[i];
+    sum += header[i-1];
   }
   quotient = sum/(max_int + 1);
   remainder = sum%(max_int + 1);
