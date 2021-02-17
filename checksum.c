@@ -23,7 +23,7 @@ int main (int argc, char * argv[], char ** envp) {
   int count = 10;
   int sum = 0;
   int quotient;
-  int remainer;   
+  int remainder;   
   byte checksum; 
   byte complement;
 
