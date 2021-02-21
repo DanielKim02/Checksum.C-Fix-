@@ -37,7 +37,7 @@ int main (int argc, char * argv[], char ** envp) {
       checksum = header[i-1];
       header[i-1] = 0;
     }
-    else if((sum+header(i-1))< max_int){
+    else if((sum+header[i-1])< max_int){
     sum += header[i-1];
     }
     else{
