@@ -21,6 +21,7 @@
 int main (int argc, char * argv[], char ** envp) {
 
   int count = 10;
+  int temp = 0;
   int sum = 0;
   int quotient;
   int remainder;   
@@ -36,12 +37,19 @@ int main (int argc, char * argv[], char ** envp) {
       checksum = header[i-1];
       header[i-1] = 0;
     }
+    else if((sum+header(i-1))< max_int){
     sum += header[i-1];
+    }
+    else{
+      temp = max_int - sum;
+      sum = header[i-1]- temp;
+    }
   }
-  quotient = sum/(max_int + 1);
-  remainder = sum%(max_int + 1);
-  sum = quotient + remainder;
+
+  
+  
   complement = max_int - sum;
+  
 
 
 
